@@ -60,6 +60,7 @@ body > header .navbar {
   background-color: transparent;
   height: 45px;
   border-radius: 0px;
+  margin-left: -20px;
 }
 body > header .navbar ul.navbar-nav li a {
   color: white;
