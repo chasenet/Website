@@ -12,7 +12,8 @@
         "composer/installers"               : "dev-master",
         "cysha/pxcms-core"                  : "dev-master",
         "cysha/pxcms-auth"                  : "dev-master",
-        "cysha/pxcms-pages"                 : "dev-master"
+        "cysha/pxcms-pages"                 : "dev-master",
+        "cysha/pxcms-chasenet"              : "dev-master"
 	},
 	"require-dev":{
         "fzaninotto/faker"                  : "dev-master"
@@ -30,7 +31,8 @@
 		]
 	},
     "repositories": [
-        { "type": "vcs", "url": "https://github.com/cysha/installers" }
+        { "type": "vcs", "url": "https://github.com/cysha/installers" },
+        { "type": "vcs", "url": "https://github.com/chasenet/pxcms-pages" }
     ],
 	"scripts": {
 		"post-install-cmd": [
