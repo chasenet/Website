@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Filesystem\Filesystem as File;
+
 return array(
 
     'site-name' => 'Chasenet',
@@ -26,7 +28,7 @@ return array(
     |
     */
 
-    'debug' => true,
+    'debug' => File::exists(storage_path().'/meta/debugfile'),
 
     /*
     |--------------------------------------------------------------------------
