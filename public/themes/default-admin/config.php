@@ -2,7 +2,7 @@
 
 return array(
     // theme info
-    'name'    => 'Default Admin',
+    'name'    => 'default-admin',
     'author'  => 'Dan Aldridge',
     'site'    => 'http://cysha.co.uk',
     'type'    => 'backend',
@@ -40,15 +40,13 @@ return array(
             $theme->asset()->usePath()->add('base', 'css/sb-admin.css', array('bs3.css', 'jasny-bs3.css'));
 
             // add dropdown-menu classes and such for the bootstrap toggle
-            Menu::handler('acp')
-                ->class('nav navbar-nav side-nav');
+            Menu::handler('acp')->addClass('nav')->id('side-menu');
 
             Menu::handler('acp')
                 ->getAllItemLists()
                 ->map(function ($itemList) {
                     if( $itemList->getParent() !== null && $itemList->hasChildren() ) {
-                        $itemList->getParent()->getValue()->addClass('dropdown-toggle')->data_toggle('dropdown');
-                        $itemList->addClass('dropdown-menu');
+                        $itemList->addClass('nav nav-second-level');
                     }
                 });
 
@@ -57,23 +55,27 @@ return array(
                 ->getItemsByContentType('Menu\Items\Contents\Link')
                 ->map(function ($item) {
                     if( $item->hasChildren() ) {
-                        $item->addClass('dropdown');
-                        $item->getValue()->setValue($item->getValue()->getValue().' <span class="fa fa-caret-down"></span>');
+                        $item->getValue()->addClass('text-center title');
+                        //$item->getValue()->setValue($item->getValue()->getValue().' <span class="fa arrow"></span>');
                     }
 
-                    if( $item->getElement() == 'li' ){
-                        if( $item->getValue()->getValue() == '__DIVIDER__' ){
-                            $item->addClass('divider');
-                        }
-                    }
+                    // if( $item->getElement() == 'li' ){
+                    //     if( $item->getValue()->getValue() === '__DIVIDER__' ){
+                    //         $item->getValue()->setValue('<hr/>');
+                    //         $item->addClass('divider');
+                    //     }
+                    // }
                 });
 
+            // set the nav up for the sidenav
             Menu::handler('acp.config_menu')->addClass('nav');
         },
 
         'beforeRenderLayout' => array(
             'default' => function ($theme) {
                 Assets::add('admin');
+                //$theme->asset()->usePath()->add('metisMenu.js', 'js/jquery.metisMenu.js');
+                $theme->asset()->usePath()->add('sb-admin.js', 'js/sb-admin.js');
                 $theme->asset()->usePath()->add('app.js', 'js/app/application.js', array('bs3.js', 'jasny-bs3.js'));
                 $theme->asset()->usePath()->add('modernizr', 'js/modernizr.js');
             }
