@@ -32,6 +32,8 @@
 		]
 	},
     "repositories": [
+        { "type": "composer", "url": "http://packages.cybershade.org/" },
+        { "type": "composer", "url": "http://packages.phoenixcms.org/" },
         { "type": "vcs", "url": "https://github.com/cysha/installers" },
         { "type": "vcs", "url": "https://github.com/chasenet/pxcms-pages" }
     ],
