@@ -137,8 +137,9 @@ return array(
 
         'Creolab\LaravelModules\ServiceProvider',       # https://github.com/creolab/laravel-modules
 
-        'Barryvdh\Debugbar\ServiceProvider',            # https://github.com/barryvdh/laravel-debugbar
 
+        'Barryvdh\Debugbar\ServiceProvider',            # https://github.com/barryvdh/laravel-debugbar
+        'Dingo\Api\ApiServiceProvider',                 # https://github.com/dingo/api
     ),
 
     /*
@@ -206,7 +207,8 @@ return array(
         'View'            => 'Illuminate\Support\Facades\View',
 
         'Debugbar'        => 'Barryvdh\Debugbar\Facade',
-
+        'API'             => 'Dingo\Api\Facades\API',
+        'Controller'      => 'Dingo\Api\Routing\Controller'
     ),
 
 );
