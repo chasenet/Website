@@ -8,15 +8,18 @@
 
         "creolab/laravel-modules"           : "dev-master",
         "barryvdh/laravel-debugbar"         : "dev-master",
-        "dingo/api"			    : "dev-master",
+        "dingo/api"                         : "dev-master",
         "composer/installers"               : "dev-master",
+
+        "cysha/pxcms-default"               : "dev-master",
+        "cysha/pxcms-default-admin"         : "dev-master",
+        "cysha/pxcms-chasenet"              : "dev-master",
 
         "cysha/pxcms-admin"                 : "dev-master",
         "cysha/pxcms-core"                  : "dev-master",
         "cysha/pxcms-auth"                  : "dev-master",
         "cysha/pxcms-pages"                 : "dev-master",
-        "cysha/pxcms-news"                  : "dev-master",
-        "cysha/pxcms-chasenet"              : "dev-master"
+        "cysha/pxcms-news"                  : "dev-master"
 	},
 	"require-dev":{
         "fzaninotto/faker"                  : "dev-master"
@@ -36,7 +39,8 @@
     "repositories": [
         { "type": "composer", "url": "http://packages.cybershade.org/" },
         { "type": "composer", "url": "http://packages.phoenixcms.org/" },
-        { "type": "vcs", "url": "https://github.com/cysha/installers" }
+        { "type": "vcs", "url": "https://github.com/cysha/installers" },
+        { "type": "vcs", "url": "https://github.com/chasenet/pxcms-pages" }
     ],
 	"scripts": {
 		"post-install-cmd": [
