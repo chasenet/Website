@@ -135,10 +135,10 @@ return array(
         'Illuminate\View\ViewServiceProvider',
         'Illuminate\Workbench\WorkbenchServiceProvider',
 
-        'Creolab\LaravelModules\ServiceProvider',       # https://github.com/creolab/laravel-modules
-
         'Barryvdh\Debugbar\ServiceProvider',            # https://github.com/barryvdh/laravel-debugbar
-        'Dingo\Api\ApiServiceProvider',                 # https://github.com/dingo/api
+        'Dingo\Api\Provider\ApiServiceProvider',        # https://github.com/dingo/api
+
+        'Creolab\LaravelModules\ServiceProvider',       # https://github.com/creolab/laravel-modules
     ),
 
     /*
@@ -174,7 +174,7 @@ return array(
         'Cache'                => 'Illuminate\Support\Facades\Cache',
         'ClassLoader'          => 'Illuminate\Support\ClassLoader',
         'Config'               => 'Illuminate\Support\Facades\Config',
-        // 'Controller'        => 'Illuminate\Routing\Controller',
+        'Controller'           => 'Illuminate\Routing\Controller',
         'Cookie'               => 'Illuminate\Support\Facades\Cookie',
         'Crypt'                => 'Illuminate\Support\Facades\Crypt',
         'DB'                   => 'Illuminate\Support\Facades\DB',
@@ -207,7 +207,6 @@ return array(
 
         'Debugbar'             => 'Barryvdh\Debugbar\Facade',
         'API'                  => 'Dingo\Api\Facades\API',
-        'Controller'           => 'Dingo\Api\Routing\Controller'
     ),
 
 );
